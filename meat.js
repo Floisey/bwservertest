@@ -1,4 +1,52 @@
-
+var settingsSantize = {
+    allowedTags: [ 'h3', 'h4', 'h5', 'h6', 'blockquote', 'p', 'a', 'ul', 'ol',
+    'nl', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'div',
+    'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'iframe','marquee','button','input'
+    ,'details','summary','progress','meter','font','h1','h2','span','select','option','abbr',
+    'acronym','adress','article','aside','bdi','bdo','big','center','site',
+    'data','datalist','dl','del','dfn','dialog','dir','dl','dt','fieldset',
+    'figure','figcaption','header','ins','kbd','legend','mark','nav',
+    'optgroup','form','q','rp','rt','ruby','s','sample','section','small',
+    'sub','sup','template','textarea','tt','u'],
+  allowedAttributes: {
+    a: [ 'href', 'name', 'target' ],
+    p:['align'],
+    table:['align','border','bgcolor','cellpadding','cellspadding','frame','rules','width'],
+    tbody:['align','valign'],
+    tfoot:['align','valign'],
+    td:['align','colspan','headers','nowrap'],
+    th:['align','colspan','headers','nowrap'],
+    textarea:['cols','dirname','disabled','placeholder','maxlength','readonly','required','rows','wrap'],
+    pre:['width'],
+    ol:['compact','reversed','start','type'],
+    option:['disabled'],
+    optgroup:['disabled','label','selected'],
+    legend: ['align'],
+    li:['type','value'],
+    hr:['align','noshade','size','width'],
+    fieldset:['disabled'],
+    dialog:['open'],
+    dir:['compact'],
+    bdo:['dir'],
+    div:['class'],
+    marquee:['behavior','bgcolor','direction','width','height','loop'],
+    button: ['disabled'],
+    input:['value','type','disabled','maxlength','max','min','placeholder','readonly','required'],
+    details:['open'],
+    div:['align'],
+    progress:['value','max'],
+    meter:['value','max','min','optimum','low','high'],
+    font:['size','family','color'],
+    select:['disabled','multiple','require'],
+    ul:['type','compact'],  
+    "*":['hidden','spellcheck','title','contenteditable','data-style']
+  },
+  selfClosing: [ 'img', 'br', 'hr', 'area', 'base', 'basefont', 'input', 'link', 'meta' , 'wbr'],
+  allowedSchemes: [ 'http', 'https', 'ftp', 'mailto', 'data' ],
+  allowedSchemesByTag: {},
+  allowedSchemesAppliedToAttributes: [ 'href', 'src', 'cite' ],
+  allowProtocolRelative: true
+} 
 
 const log = require("./log.js").log;
 const Ban = require("./ban.js");
