@@ -128,7 +128,7 @@
   ],
   "bonziHats": [
     "unicorn"
-  ]
+  ],
   "banLength": 1440,
   "port": 80,
   "express": {
