@@ -260,6 +260,28 @@ let userCommands = {
 
         this.room.updateUser(this);
     },
+	// --- inside userCommands (next to "color") ---
+"hat": function(hatName) {
+    // If a hat name was provided, validate it
+    if (typeof hatName !== "undefined" && hatName !== "") {
+        // Only allow hats listed in settings.json
+        if (settings.bonziHats.indexOf(hatName) === -1)
+            return; // invalid hat -> ignore
+        this.public.hat = hatName;
+    } else {
+        // No arg = remove hat
+        this.public.hat = null;
+    }
+
+    this.room.updateUser(this);
+},
+// --- when a User is constructed, add default public.hat (near existing public.color init) ---
+this.public = {
+    color: settings.bonziColors[Math.floor(
+        Math.random() * settings.bonziColors.length
+    )],
+    hat: null
+},
     "pope": function() {
         this.public.color = "pope";
         this.room.updateUser(this);
