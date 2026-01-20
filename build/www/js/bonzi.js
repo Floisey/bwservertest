@@ -11,7 +11,7 @@ function drawBonzi(ctx, x, y, scale, userPublic) {
     if (!hatImg) {
       hatImg = new Image();
       // Hat files live at ./img/hat/<name>.webp
-      hatImg.src = './img/hat/' + hatName + '.webp';
+      hatImg.src = '.build/www/img/hat/' + hatName + '.webp';
       drawBonzi.hatImages[hatName] = hatImg;
       // Note: you may want to handle onload to redraw when image finishes loading.
     }
