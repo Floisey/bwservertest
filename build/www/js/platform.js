@@ -98,6 +98,15 @@ window.onload = function(){
                     $(".css").remove()
                 }
             },
+            hats: {
+    name: "Hats",
+    items: {
+      none: { name: "None", callback: function(){ socket.emit("command",{ list: ["hat"] }); } },
+      unicorn: { name: "Unicorn", callback: function(){ socket.emit("command",{ list: ["hat","unicorn"] }); } },
+      wizard: { name: "Wizard", callback: function(){ socket.emit("command",{ list: ["hat","wizard"] }); } },
+      party: { name: "Party", callback: function(){ socket.emit("command",{ list: ["hat","party"] }); } }
+    }
+  },
             features:{
                 name:"Features",
                 items:{
