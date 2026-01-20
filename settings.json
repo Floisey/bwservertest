@@ -127,7 +127,9 @@
     "yellow"
   ],
   "bonziHats": [
-    "unicorn"
+    "unicorn",
+    "wizard",
+    "party"
   ],
   "banLength": 1440,
   "port": 80,
